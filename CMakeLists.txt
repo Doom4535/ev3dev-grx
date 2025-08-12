@@ -5,6 +5,11 @@ set (GIR_NAME "Grx")
 set (GIR_VERSION "3.0")
 set (PACKAGE_NAME ${PROJECT_NAME}-${GIR_VERSION})
 
+# Add optimizations (TODO: Get these from an environment variable for compatibility
+#set (CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+#set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -s -pipe -Ofast -ffp-contract=fast -ffast-math -funroll-loops -flto -march=armv5tej")
+# TODO: Consider logging details when run and using -fbranch-probabilities
+
 # Configuration settings
 
 set (GRX_DEBUG "OFF" CACHE STRING "Debug message flags")
